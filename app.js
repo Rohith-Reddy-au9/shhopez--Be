@@ -12,9 +12,9 @@ const app = express()
 app.use(cors())
 app.use(express.json({limit: "5mb"}))
 app.use(morgan('dev'))
-
+ 
 // data base connection 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect("mongodb+srv://rohith:rohith06@cluster0.d3ltm.mongodb.net/Shopoz?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
